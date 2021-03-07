@@ -1,0 +1,39 @@
+************************* Duican Mihnea - Ionut *************************
+********************************* 324CA *********************************
+*********************** Cel mai mic stramos comun ***********************
+
+Arhiva este structurata conform detaliilor regasite in API pe git.
+
+In algo.h se regaseste signatura unei singure functii. Este comuna celor 3
+implementari, fiind cea care face apelul pentru executarea algoritmilor.
+Functii aditionale specifice fiecarei abordari se regasesc in fisierele .cpp.
+
+Implementarile oferite de mine sunt urmatoarele:
+>> algo1.cpp LCA folosind algoritmul lui Tarjan si paduri de multimi disjuncte
+>> algo2.cpp LCA folosind reprezentarea Euler a arborelui si arbori de intervale
+>> algo3.cpp LCA folosind reprezentarea Euler a arborelui si RMQ
+
+Fisierlu makefile compune fisiere .o pornind de la fisierele .cpp.
+
+In folderele in si out se gasesc inputuri si respectiv rezultatele asteptate,
+menite sa testeze functionalitatea celor 3 implementari. Structura testelor
+este urmatoarea: la input se primesc pe prima linie n - nr. de noduri
+din arbore, m - nr. de interogari, pe urmatoarele n - 1 linii - perechi de
+noduri reprezentand faptul ca exsta muchie intre ele, pe urmatoarele
+m linii - perechi de noduri reprezentand faptul ca trebuie depistat cel mai mic
+stramos comun intre cele doua noduri; la output avem m linii, pe linia i
+aflandu-se raspunsul la interogarea i din input.
+
+Suplimentar!!
+
+Am facut un generator de teste, codul sursa pentru acesta, impreuna cu 3 teste
+generate, se regaseste in folderul other_test. Acesta poate genera teste specifice
+in functie de tipul de arbore dorit (arbore ce se raspandeste pe "inaltime",
+pe "latime" sau arbore generat aleatoriu), cat si in functie de numarul de noduri
+si de interogari, totul dat ca input de la tastatura.
+
+Am testat functionalitatea implementarilor mele pe infoarena (numele meu de
+utilizator este mihnea00). Solutiile ce folosesc Tarjan+PMD si Euler+RMQ obtin
+100p(conform datelor problemei implementarea cu Tarjan trebuia sa iasa din timp
+pe anumite teste insa mie imi intra =D), in timp ce solutia Euler+ArbInt
+obtine 70 de puncte(iese din timp), raportat la conditiile impuse pe site.
